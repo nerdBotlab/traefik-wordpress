@@ -11,14 +11,14 @@ services:
       - web
       - default
     environment:
-      WORDPRESS_DB_PASSWORD: example
+      WORDPRESS_DB_PASSWORD: c3a5er1607
     volumes:
       - ./config/php.conf.uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./wp-app:/var/www/html # Full wordpress project
     labels:
-      - "traefik.backend=wordpress-example"
+      - "traefik.backend=nerdBot Lab"
       - "traefik.docker.network=web"
-      - "traefik.frontend.rule=Host:example.dk,www.dellydot.dk"
+      - "traefik.frontend.rule=Host:nerdbotlab.com,www.nerdbotlab.com"
       - "traefik.enable=true"
       - "traefik.port=80"
 
@@ -29,7 +29,7 @@ services:
       - web
       - default
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: c3a5er1607
     volumes:
       - ./wp-data:/docker-entrypoint-initdb.d
 
